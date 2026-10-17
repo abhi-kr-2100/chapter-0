@@ -1,0 +1,17 @@
+{
+	"extends": "./tsconfig.base.json",
+	"compilerOptions": {
+		"experimentalDecorators": true,
+		"importHelpers": true,
+		"lib": ["ES2022", "DOM", "DOM.Iterable"],
+		"types": [],
+		"noEmit": false
+	},
+	"angularCompilerOptions": {
+		"enableI18nLegacyMessageIdFormat": false,
+		"strictInjectionParameters": true,
+		"strictInputAccessModifiers": true,
+		"strictTemplates": true
+	},
+	"include": ["src/**/*.d.ts", "src/**/*.ts"]
+}

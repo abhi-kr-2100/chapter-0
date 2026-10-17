@@ -1,0 +1,10 @@
+{
+	"extends": "./tsconfig.base.json",
+	"compilerOptions": {
+		"lib": ["ES2023"],
+		"types": ["bun", "node"],
+		"allowImportingTsExtensions": true,
+		"allowJs": true
+	},
+	"include": ["plugins/**/*.test.ts"]
+}

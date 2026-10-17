@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <title>Offline</title>
+  <rect width="200" height="200" rx="16" fill="#0b0f19" />
+  <g fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="45" y="45" width="110" height="80" rx="8" />
+    <circle cx="75" cy="70" r="10" />
+    <path d="M50 115 L85 85 L120 115" />
+    <path d="M105 105 L125 90 L150 115" />
+    <line x1="35" y1="135" x2="165" y2="35" stroke="#ef4444" stroke-width="8" />
+  </g>
+  <text x="100" y="165" fill="#94a3b8" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" text-anchor="middle">Offline</text>
+</svg>
