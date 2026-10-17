@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>Chapter 0</title>
+  <rect width="512" height="512" rx="112" fill="#0b0f19" />
+
+  <g fill="none" stroke="#38bdf8" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Slender spine crease (stops cleanly before 0) -->
+    <line x1="256" y1="146" x2="256" y2="181" stroke-width="10" />
+    <line x1="256" y1="339" x2="256" y2="374" stroke-width="10" />
+
+    <!-- Left Page Outline -->
+    <path d="M 256 146 
+             C 184 120, 116 134, 84 152 
+             C 76 157, 72 165, 72 174 
+             L 72 344 
+             C 72 352, 78 358, 86 354 
+             C 116 338, 184 346, 256 374" 
+          stroke-width="14" />
+
+    <!-- Right Page Outline -->
+    <path d="M 256 146 
+             C 328 120, 396 134, 428 152 
+             C 436 157, 440 165, 440 174 
+             L 440 344 
+             C 440 352, 434 358, 426 354 
+             C 396 338, 328 346, 256 374" 
+          stroke-width="14" />
+
+    <!-- Slashed Stadium 0: Distinct numeral 0 (not an O), Sky Blue (not white/black) -->
+    <rect x="222" y="197" width="68" height="126" rx="34" stroke-width="14" />
+    <line x1="280" y1="220" x2="232" y2="300" stroke-width="12" />
+  </g>
+</svg>
