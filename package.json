@@ -1,0 +1,14 @@
+{
+	"name": "chapter-0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"format": "biome format --write .",
+		"check": "biome check .",
+		"check:write": "biome check --write ."
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"@biomejs/biome": "^2.5.15"
+	}
+}
