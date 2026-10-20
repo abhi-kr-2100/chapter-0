@@ -12,6 +12,10 @@ Chapter 0 is a local-first in-browser document reader.
 * Threading: Main thread strictly for UI and gestures; Web Workers for parsing, ZIP decompression, PDF rasterization, and search indexing.
 * OS Integration: File Handling API, Web Share Target, and Storage Persistence API.
 
+## Coding Guidelines
+
+* Do not ever use CSS. Use StyleX.
+
 ## Verification
 
 * Format: `bun run format`
