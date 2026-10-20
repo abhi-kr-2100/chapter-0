@@ -9,9 +9,14 @@ export default function manifest(): MetadataRoute.Manifest {
     description: "Local-first in-browser document reader",
     start_url: "/",
     display: "standalone",
-    background_color: "#ffffff",
-    theme_color: "#000000",
+    background_color: "#FBFBF9",
+    theme_color: "#FBFBF9",
     icons: [
+      {
+        src: "/icons/icon.svg",
+        sizes: "any",
+        type: "image/svg+xml",
+      },
       {
         src: "/icons/icon-192.png",
         sizes: "192x192",
@@ -21,6 +26,12 @@ export default function manifest(): MetadataRoute.Manifest {
         src: "/icons/icon-512.png",
         sizes: "512x512",
         type: "image/png",
+      },
+      {
+        src: "/icons/icon-maskable.svg",
+        sizes: "any",
+        type: "image/svg+xml",
+        purpose: "maskable",
       },
       {
         src: "/icons/icon-maskable-512.png",

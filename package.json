@@ -4,7 +4,9 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "bun run generate:icons",
     "build": "next build",
+    "generate:icons": "magick -background none -density 300 public/icons/icon.svg -resize 192x192 public/icons/icon-192.png && magick -background none -density 300 public/icons/icon.svg -resize 512x512 public/icons/icon-512.png && magick -background none -density 300 public/icons/icon-maskable.svg -resize 512x512 public/icons/icon-maskable-512.png && magick -background none -density 256 public/favicon.svg -define icon:auto-resize=16,32,48 public/favicon.ico",
     "format": "biome format --write .",
     "check": "biome check .",
     "check:write": "biome check --write ."

@@ -2,8 +2,9 @@
 
 Chapter 0 is a local-first in-browser document reader.
 
-## Architecture at a Glance
+## Architecture
 
+* Framework: Next.js (App Router, static export).
 * Runtime: Hosted PWA, 100% offline via Service Workers.
 * Delivery: SSG (static site).
 * Storage:
@@ -15,6 +16,7 @@ Chapter 0 is a local-first in-browser document reader.
 ## Coding Guidelines
 
 * Do not ever use CSS. Use StyleX.
+* Use shadcn to download UI components, and modify them to use StyleX.
 
 ## Verification
 

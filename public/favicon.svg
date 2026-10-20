@@ -2,22 +2,18 @@
   <title>Chapter 0</title>
   <style>
     :root {
-      --icon-color: #38bdf8;
+      --accent-color: #C85A32;
     }
-    @media (prefers-color-scheme: light) {
+    @media (prefers-color-scheme: dark) {
       :root {
-        --icon-color: #0284c7;
+        --accent-color: #E07A52;
       }
     }
   </style>
 
-  <g fill="none" stroke="var(--icon-color)" stroke-linecap="round" stroke-linejoin="round">
-    <line x1="256" y1="146" x2="256" y2="181" stroke-width="12" />
-    <line x1="256" y1="339" x2="256" y2="374" stroke-width="12" />
-    <path d="M 256 146 C 184 120, 116 134, 84 152 C 76 157, 72 165, 72 174 L 72 344 C 72 352, 78 358, 86 354 C 116 338, 184 346, 256 374" stroke-width="16" />
-    <path d="M 256 146 C 328 120, 396 134, 428 152 C 436 157, 440 165, 440 174 L 440 344 C 440 352, 434 358, 426 354 C 396 338, 328 346, 256 374" stroke-width="16" />
-    <!-- Slashed Stadium 0 -->
-    <rect x="222" y="197" width="68" height="126" rx="34" stroke-width="16" />
-    <line x1="280" y1="220" x2="232" y2="300" stroke-width="14" />
+  <!-- Full-sized Slashed 0 (transparent background for browser tab adaptability) -->
+  <g fill="none" stroke="var(--accent-color, #C85A32)" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="150" y="80" width="212" height="352" rx="106" stroke-width="44" />
+    <line x1="316" y1="140" x2="196" y2="372" stroke-width="28" />
   </g>
 </svg>

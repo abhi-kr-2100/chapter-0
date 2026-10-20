@@ -21,6 +21,7 @@
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
             bun
+            imagemagick
           ];
           # TODO: This won't work on non-linux-x64 systems.
           shellHook = ''
