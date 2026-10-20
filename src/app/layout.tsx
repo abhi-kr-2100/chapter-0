@@ -1,11 +1,37 @@
+import * as stylex from "@stylexjs/stylex";
 import type { Metadata, Viewport } from "next";
+import { Cantarell, Petit_Formal_Script } from "next/font/google";
 import type { ReactNode } from "react";
+import { colors, typography } from "../styles/tokens.stylex";
 import "./globals.css";
 import { ServiceWorkerRegister } from "./sw-register";
 
+const petitFormalScript = Petit_Formal_Script({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-petit",
+  display: "swap",
+});
+
+const cantarell = Cantarell({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-cantarell",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Chapter 0",
-  description: "Local-first in-browser document reader",
+  description: "Read books inside your browser",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: [
+      { url: "/icons/icon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
@@ -14,17 +40,41 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#000000",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#FBFBF9" },
+    { media: "(prefers-color-scheme: dark)", color: "#141312" },
+  ],
 };
+
+const styles = stylex.create({
+  html: {
+    colorScheme: "light dark",
+    boxSizing: "border-box",
+  },
+  body: {
+    backgroundColor: colors.background,
+    color: colors.textPrimary,
+    fontFamily: typography.fontSans,
+    margin: 0,
+    boxSizing: "border-box",
+    WebkitFontSmoothing: "antialiased",
+    MozOsxFontSmoothing: "grayscale",
+  },
+});
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: ReactNode;
 }>) {
+  const htmlProps = stylex.props(styles.html);
+
   return (
-    <html lang="en">
-      <body>
+    <html
+      lang="en"
+      className={`${petitFormalScript.variable} ${cantarell.variable} ${htmlProps.className}`}
+    >
+      <body {...stylex.props(styles.body)}>
         {children}
         <ServiceWorkerRegister />
       </body>

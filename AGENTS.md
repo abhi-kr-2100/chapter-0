@@ -17,6 +17,12 @@ Chapter 0 is a local-first in-browser document reader.
 
 * Do not ever use CSS. Use StyleX.
 * Use shadcn to download UI components, and modify them to use StyleX.
+* Design code so that undefined, null, and fallback (using ?? or ||) are not required.
+* Prefer high-level custom hooks over primitive React hooks.
+* Testing:
+   * Do not use mocks; test real implementations directly.
+   * Maintain 100% line and branch coverage.
+   * Write unit tests, integration tests, as well as E2E tests.
 
 ## Verification
 

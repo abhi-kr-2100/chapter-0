@@ -14,16 +14,16 @@ export const colors = stylex.defineVars({
     "@media (prefers-color-scheme: dark)": "#A8A29E",
   },
   accent: {
-    default: "#C85A32",
+    default: "#BC4F26",
     "@media (prefers-color-scheme: dark)": "#E07A52",
   },
   accentHover: {
-    default: "#B24E28",
+    default: "#A5431F",
     "@media (prefers-color-scheme: dark)": "#EA8E69",
   },
   accentForeground: {
     default: "#FFFFFF",
-    "@media (prefers-color-scheme: dark)": "#FFFFFF",
+    "@media (prefers-color-scheme: dark)": "#141312",
   },
   transparent: "transparent",
 });

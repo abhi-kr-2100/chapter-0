@@ -4,7 +4,7 @@
     :root {
       --bg-color: #FBFBF9;
       --border-color: #E7E5DF;
-      --accent-color: #C85A32;
+      --accent-color: #BC4F26;
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -19,7 +19,7 @@
   <rect width="512" height="512" rx="112" fill="var(--bg-color, #FBFBF9)" stroke="var(--border-color, #E7E5DF)" stroke-width="4" />
 
   <!-- Full-sized Slashed 0 (maintaining safe zone) -->
-  <g fill="none" stroke="var(--accent-color, #C85A32)" stroke-linecap="round" stroke-linejoin="round">
+  <g fill="none" stroke="var(--accent-color, #BC4F26)" stroke-linecap="round" stroke-linejoin="round">
     <rect x="150" y="80" width="212" height="352" rx="106" stroke-width="44" />
     <line x1="316" y1="140" x2="196" y2="372" stroke-width="28" />
   </g>

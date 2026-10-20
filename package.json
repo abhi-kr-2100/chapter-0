@@ -6,7 +6,9 @@
     "dev": "next dev",
     "prebuild": "bun run generate:icons",
     "build": "next build",
+    "postbuild": "bun run generate:sw",
     "generate:icons": "magick -background none -density 300 public/icons/icon.svg -resize 192x192 public/icons/icon-192.png && magick -background none -density 300 public/icons/icon.svg -resize 512x512 public/icons/icon-512.png && magick -background none -density 300 public/icons/icon-maskable.svg -resize 512x512 public/icons/icon-maskable-512.png && magick -background none -density 256 public/favicon.svg -define icon:auto-resize=16,32,48 public/favicon.ico",
+    "generate:sw": "bun -e 'import { runCli, DEFAULT_SW_OPTIONS } from \"./scripts/generate-sw\"; await runCli(DEFAULT_SW_OPTIONS);'",
     "format": "biome format --write .",
     "check": "biome check .",
     "check:write": "biome check --write ."
