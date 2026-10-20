@@ -6,3 +6,5 @@ out
 .DS_Store
 Thumbs.db
 *.tsbuildinfo
+coverage
+/public/sw.js

@@ -1,14 +1,24 @@
 import * as stylex from "@stylexjs/stylex";
+import { EmptyState } from "../components/library/EmptyState";
+import { spacing } from "../styles/tokens.stylex";
 
 const styles = stylex.create({
-  container: {
+  main: {
     display: "flex",
-    justifyContent: "center",
+    flexDirection: "column",
     alignItems: "center",
+    justifyContent: "center",
     minHeight: "100vh",
+    boxSizing: "border-box",
+    paddingLeft: spacing.lg,
+    paddingRight: spacing.lg,
   },
 });
 
 export default function Home() {
-  return <main {...stylex.props(styles.container)}>Hello, Chapter 0!</main>;
+  return (
+    <main {...stylex.props(styles.main)}>
+      <EmptyState />
+    </main>
+  );
 }

@@ -2,7 +2,7 @@
   <title>Chapter 0</title>
   <style>
     :root {
-      --accent-color: #C85A32;
+      --accent-color: #BC4F26;
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -12,7 +12,7 @@
   </style>
 
   <!-- Full-sized Slashed 0 (transparent background for browser tab adaptability) -->
-  <g fill="none" stroke="var(--accent-color, #C85A32)" stroke-linecap="round" stroke-linejoin="round">
+  <g fill="none" stroke="var(--accent-color, #BC4F26)" stroke-linecap="round" stroke-linejoin="round">
     <rect x="150" y="80" width="212" height="352" rx="106" stroke-width="44" />
     <line x1="316" y1="140" x2="196" y2="372" stroke-width="28" />
   </g>
