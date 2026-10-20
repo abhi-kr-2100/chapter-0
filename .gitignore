@@ -8,3 +8,4 @@ Thumbs.db
 *.tsbuildinfo
 coverage
 /public/sw.js
+/next-env.d.ts

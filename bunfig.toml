@@ -1,0 +1,7 @@
+[test]
+preload = ["./test/setup.ts"]
+
+[test.coverageThreshold]
+lines = 1.0
+functions = 1.0
+branches = 1.0

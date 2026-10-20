@@ -11,7 +11,11 @@
     "generate:sw": "bun -e 'import { runCli, DEFAULT_SW_OPTIONS } from \"./scripts/generate-sw\"; await runCli(DEFAULT_SW_OPTIONS);'",
     "format": "biome format --write .",
     "check": "biome check .",
-    "check:write": "biome check --write ."
+    "check:write": "biome check --write .",
+    "test": "bun test --coverage",
+    "test:unit": "bun test --coverage test/unit",
+    "test:integration": "bun test --coverage test/integration",
+    "test:e2e": "bun test --coverage test/e2e"
   },
   "dependencies": {
     "@stylexjs/stylex": "^0.19.1",
@@ -20,13 +24,21 @@
     "react-dom": "^19.3.1"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@babel/core": "^7.29.7",
+    "@babel/plugin-syntax-jsx": "^7.29.7",
+    "@babel/plugin-syntax-typescript": "^7.29.7",
     "@biomejs/biome": "^2.5.15",
     "@stylexjs/babel-plugin": "^0.19.1",
     "@stylexjs/postcss-plugin": "^0.19.1",
+    "@types/babel__core": "^7.20.5",
     "@types/node": "^26.6.5",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "autoprefixer": "^10.6.1",
+    "axe-core": "^4.14.0",
+    "happy-dom": "^21.0.3",
+    "playwright-core": "^1.64.1",
     "typescript": "^7.0.2"
   }
 }
