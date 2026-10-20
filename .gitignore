@@ -1,6 +1,8 @@
 node_modules
 dist
-.angular
+.next
+out
 .direnv
 .DS_Store
 Thumbs.db
+*.tsbuildinfo
