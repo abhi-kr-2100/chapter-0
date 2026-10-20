@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
+import "./globals.css";
 import { ServiceWorkerRegister } from "./sw-register";
 
 export const metadata: Metadata = {
