@@ -6,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Chapter 0",
     short_name: "Chapter 0",
-    description: "Local-first in-browser document reader",
+    description: "Book reader inside your browser",
     start_url: "/",
     display: "standalone",
     background_color: "#FBFBF9",
