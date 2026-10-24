@@ -22,7 +22,7 @@ export interface GenerateSWResult {
 const EXCLUDED_EXTENSIONS = new Set([".map"]);
 const EXCLUDED_FILENAMES = new Set(["sw.js"]);
 
-async function pathExists(filePath: string): Promise<boolean> {
+export async function pathExists(filePath: string): Promise<boolean> {
   try {
     await fs.access(filePath);
     return true;
@@ -64,7 +64,7 @@ export async function collectPrecacheAssets(outDir: string): Promise<string[]> {
 
   await walk(outDir);
 
-  if (assets.includes("/index.html") && !assets.includes("/")) {
+  if (assets.includes("/index.html")) {
     assets.push("/");
   }
 
@@ -208,11 +208,9 @@ export async function generateServiceWorker(
   const publicPath = path.join(publicDir, "sw.js");
 
   if (writeFiles) {
-    if (await pathExists(outDir)) {
-      await fs.writeFile(outputPath, code, "utf8");
-    }
+    await fs.writeFile(outputPath, code);
     if (await pathExists(publicDir)) {
-      await fs.writeFile(publicPath, code, "utf8");
+      await fs.writeFile(publicPath, code);
     }
   }
 
