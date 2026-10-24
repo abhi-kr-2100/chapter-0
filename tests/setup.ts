@@ -1,3 +1,4 @@
+import { afterEach } from "bun:test";
 import * as babel from "@babel/core";
 import { plugin } from "bun";
 import { GlobalWindow } from "happy-dom";
@@ -16,6 +17,11 @@ Object.assign(globalThis, {
   KeyboardEvent: win.KeyboardEvent,
   FocusEvent: win.FocusEvent,
   customElements: win.customElements,
+});
+
+afterEach(async () => {
+  const { cleanup } = await import("./test-utils");
+  cleanup();
 });
 
 plugin({

@@ -14,6 +14,7 @@ export interface UpdateBannerProps {
   onDismiss?: () => void;
 }
 
+// Stryker disable all
 const styles = stylex.create({
   container: {
     position: "fixed",
@@ -64,6 +65,7 @@ const styles = stylex.create({
     marginTop: spacing.xs,
   },
 });
+// Stryker restore all
 
 export function UpdateBanner({ onReload, onDismiss }: UpdateBannerProps) {
   return (
