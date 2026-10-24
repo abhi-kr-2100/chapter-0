@@ -2,6 +2,7 @@ import * as stylex from "@stylexjs/stylex";
 import { colors, spacing, typography } from "../../styles/tokens.stylex";
 import { Button } from "../ui/button";
 
+// Stryker disable all
 const styles = stylex.create({
   container: {
     display: "flex",
@@ -28,6 +29,7 @@ const styles = stylex.create({
     marginBottom: spacing.lg,
   },
 });
+// Stryker restore all
 
 export function EmptyState() {
   return (

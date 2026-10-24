@@ -11,6 +11,7 @@ export default {
   mutate: [
     "src/components/ui/button.tsx",
     "src/components/ui/UpdateBanner.tsx",
+    "src/components/library/EmptyState.tsx",
   ],
   reporters: ["clear-text", "progress"],
   concurrency: 1,
