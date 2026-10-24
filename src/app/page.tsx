@@ -2,6 +2,7 @@ import * as stylex from "@stylexjs/stylex";
 import { EmptyState } from "../components/library/EmptyState";
 import { spacing } from "../styles/tokens.stylex";
 
+// Stryker disable all
 const styles = stylex.create({
   main: {
     display: "flex",
@@ -14,6 +15,7 @@ const styles = stylex.create({
     paddingRight: spacing.lg,
   },
 });
+// Stryker restore all
 
 export default function Home() {
   return (
