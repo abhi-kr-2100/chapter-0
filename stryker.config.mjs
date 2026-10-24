@@ -12,6 +12,8 @@ export default {
     "src/components/ui/button.tsx",
     "src/components/ui/UpdateBanner.tsx",
     "src/components/library/EmptyState.tsx",
+    "src/app/page.tsx",
+    "src/app/manifest.ts",
     "scripts/generate-sw.ts",
   ],
   reporters: ["clear-text", "progress"],
