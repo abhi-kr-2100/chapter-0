@@ -1,41 +1,12 @@
-import { afterEach, describe, expect, it } from "bun:test";
-import type React from "react";
-import { flushSync } from "react-dom";
-import { createRoot, type Root } from "react-dom/client";
+import { describe, expect, it } from "bun:test";
+import { render } from "../../../tests/test-utils";
 import { Button } from "./button";
-
-const activeRoots: Array<{ root: Root; container: HTMLElement }> = [];
-
-function render(ui: React.ReactElement) {
-  const container = document.createElement("div");
-  document.body.appendChild(container);
-  const root = createRoot(container);
-  flushSync(() => {
-    root.render(ui);
-  });
-  activeRoots.push({ root, container });
-  const button = container.querySelector("button");
-  if (!button) {
-    throw new Error("Expected button element to be rendered in container");
-  }
-  return { container, button };
-}
-
-afterEach(() => {
-  while (activeRoots.length > 0) {
-    const item = activeRoots.pop();
-    if (item) {
-      flushSync(() => {
-        item.root.unmount();
-      });
-      item.container.remove();
-    }
-  }
-});
 
 describe("Button", () => {
   it("renders with default props and children", () => {
-    const { button } = render(<Button>Click me</Button>);
+    const { element: button } = render<HTMLButtonElement>(
+      <Button>Click me</Button>,
+    );
 
     expect(button.tagName).toBe("BUTTON");
     expect(button.type).toBe("button");
@@ -46,18 +17,37 @@ describe("Button", () => {
   });
 
   it("applies disabled styles and attribute when disabled", () => {
-    const { button: defaultButton } = render(<Button>Enabled</Button>);
-    const { button: disabledButton } = render(
+    const { element: defaultButton } = render<HTMLButtonElement>(
+      <Button>Enabled</Button>,
+    );
+    const { element: disabledButton } = render<HTMLButtonElement>(
       <Button disabled>Disabled</Button>,
     );
 
     expect(disabledButton.disabled).toBe(true);
-    expect(disabledButton.className).not.toBe(defaultButton.className);
+    expect(defaultButton.disabled).toBe(false);
+
+    const defaultClasses = Array.from(defaultButton.classList);
+    const disabledClasses = Array.from(disabledButton.classList);
+
+    const addedClasses = disabledClasses.filter(
+      (cls) => !defaultClasses.includes(cls),
+    );
+    const removedClasses = defaultClasses.filter(
+      (cls) => !disabledClasses.includes(cls),
+    );
+
+    expect(addedClasses.length).toBeGreaterThan(0);
+    expect(removedClasses.length).toBe(0);
   });
 
   it("merges custom className when provided", () => {
-    const { button: defaultButton } = render(<Button>Default</Button>);
-    const { button } = render(<Button className="custom-class">Custom</Button>);
+    const { element: defaultButton } = render<HTMLButtonElement>(
+      <Button>Default</Button>,
+    );
+    const { element: button } = render<HTMLButtonElement>(
+      <Button className="custom-class">Custom</Button>,
+    );
 
     expect(button.className).toContain("custom-class");
     expect(button.className).toBe(`${defaultButton.className} custom-class`);
@@ -65,7 +55,7 @@ describe("Button", () => {
 
   it("passes through rest attributes and handles click events", () => {
     let clicked = false;
-    const { button } = render(
+    const { element: button } = render<HTMLButtonElement>(
       <Button
         type="submit"
         onClick={() => {

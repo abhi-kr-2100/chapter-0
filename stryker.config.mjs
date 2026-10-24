@@ -8,7 +8,10 @@ export default {
   coverageAnalysis: "off",
   inPlace: true,
   disableTypeChecks: false,
-  mutate: ["src/components/ui/button.tsx"],
+  mutate: [
+    "src/components/ui/button.tsx",
+    "src/components/ui/UpdateBanner.tsx",
+  ],
   reporters: ["clear-text", "progress"],
   concurrency: 1,
 };
