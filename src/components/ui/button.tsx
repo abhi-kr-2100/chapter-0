@@ -18,6 +18,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children?: ReactNode;
 }
 
+// Stryker disable all
 const styles = stylex.create({
   button: {
     display: "inline-flex",
@@ -60,10 +61,11 @@ const styles = stylex.create({
     transform: "none",
   },
 });
+// Stryker restore all
 
 export function Button({
-  variant: _variant = "default",
-  size: _size = "default",
+  variant: _variant,
+  size: _size,
   disabled,
   children,
   className,

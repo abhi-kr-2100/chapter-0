@@ -1,20 +1,15 @@
 import styleXPlugin from "@stylexjs/babel-plugin";
+import { getStyleXOptions } from "./stylex-babel.config.js";
 
 export default {
   presets: ["next/babel"],
   plugins: [
     [
       styleXPlugin,
-      {
+      getStyleXOptions({
         dev: process.env.NODE_ENV !== "production",
-        runtimeInjection: false,
-        genConditionalClasses: true,
-        treeshakeCompensation: true,
-        unstable_moduleResolution: {
-          type: "commonJS",
-          rootDir: import.meta.dirname,
-        },
-      },
+        rootDir: import.meta.dirname,
+      }),
     ],
   ],
 };

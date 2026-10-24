@@ -29,3 +29,4 @@ Chapter 0 is a local-first in-browser document reader.
 * Format: `bun run format`
 * Lint: `bun run check` and `bun run check:write`
 * Typecheck: `bun run typecheck`
+* Test: `bun test` and `bun run test:mutation`
