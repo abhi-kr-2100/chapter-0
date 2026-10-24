@@ -12,7 +12,8 @@
     "format": "biome format --write .",
     "check": "biome check .",
     "check:write": "biome check --write .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test:mutation": "stryker run"
   },
   "dependencies": {
     "@stylexjs/stylex": "^0.19.1",
@@ -21,13 +22,18 @@
     "react-dom": "^19.3.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.26.9",
+    "@babel/preset-react": "^7.26.3",
+    "@babel/preset-typescript": "^7.26.0",
     "@biomejs/biome": "^2.5.15",
+    "@stryker-mutator/core": "^10.1.1",
     "@stylexjs/babel-plugin": "^0.19.1",
     "@stylexjs/postcss-plugin": "^0.19.1",
     "@types/node": "^26.6.5",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "autoprefixer": "^10.6.1",
+    "happy-dom": "^21.0.4",
     "typescript": "^7.0.2"
   }
 }

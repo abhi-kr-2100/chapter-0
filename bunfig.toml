@@ -1,0 +1,8 @@
+[test]
+coverage = true
+coveragePathIgnorePatterns = ["tests/**"]
+coverageSkipTestFiles = true
+coverageThreshold = 1.0
+preload = ["./tests/setup.ts"]
+randomize = true
+onlyFailures = true
