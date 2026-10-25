@@ -1,6 +1,7 @@
 // @ts-check
 /** @type {import("@stryker-mutator/api/core").PartialStrykerOptions} */
 export default {
+  incremental: true,
   testRunner: "command",
   commandRunner: {
     command: "bun --config=bunfig.stryker.toml test",
