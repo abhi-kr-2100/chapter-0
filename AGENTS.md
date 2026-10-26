@@ -20,13 +20,13 @@ Chapter 0 is a local-first in-browser document reader.
 * Design code so that undefined, null, and fallback (using ?? or ||) are not required.
 * Prefer high-level custom hooks over primitive React hooks.
 * Testing:
-   * Do not use mocks; test real implementations directly.
-   * Maintain 100% line and branch coverage.
-   * Write unit tests, integration tests, as well as E2E tests.
+  * Write a mix of unit and E2E tests. Write unit tests in `*.test.ts(x)` files and E2E tests in `tests/e2e/*.e2e.test.ts`.
+  * Do not use mocks; write E2E tests if a unit test scenario requires mocks.
+  * Maintain 100% line and branch coverage.
 
 ## Verification
 
 * Format: `bun run format`
 * Lint: `bun run check` and `bun run check:write`
 * Typecheck: `bun run typecheck`
-* Test: `bun test` and `bun run test:mutation`
+* Test: `bun test`, `bun run test:e2e`, and `bun run test:mutation`
