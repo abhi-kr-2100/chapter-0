@@ -242,6 +242,7 @@ describe("generate-sw unit tests", () => {
         "key.startsWith(`$" + "{CACHE_PREFIX}-`) && key !== CACHE_NAME",
       );
       expect(code).toContain('cache.match("/404.html")');
+      expect(code).not.toContain("clients.claim");
 
       // Valid JS syntax
       expect(() => new Function(code)).not.toThrow();

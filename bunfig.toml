@@ -2,7 +2,8 @@
 coverage = true
 coveragePathIgnorePatterns = [
   "tests/**",
-  "src/lib/sw/**",
+  "src/lib/sw/lifecycle.ts",
+  "src/lib/sw/use-service-worker.ts",
   "src/app/sw-register.tsx",
 ]
 coverageSkipTestFiles = true

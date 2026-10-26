@@ -37,7 +37,7 @@ describe("UpdateBanner", () => {
     }
     expect(description.tagName).toBe("P");
     expect(description.textContent).toBe(
-      "A new version of Chapter 0 is available. Reloading will update all open instances of Chapter 0.",
+      "A new version of Chapter 0 is available. All instances will reload. Please save any unsaved work.",
     );
     expect(description.className.trim().length).toBeGreaterThan(0);
 
@@ -47,7 +47,7 @@ describe("UpdateBanner", () => {
     const [dismissButton, reloadButton] = buttons;
     expect(dismissButton.textContent).toBe("Dismiss");
     expect(dismissButton.type).toBe("button");
-    expect(reloadButton.textContent).toBe("Reload");
+    expect(reloadButton.textContent).toBe("Update");
     expect(reloadButton.type).toBe("button");
 
     const actions = dismissButton.parentElement;
@@ -65,7 +65,7 @@ describe("UpdateBanner", () => {
     expect(buttons.length).toBe(1);
 
     const [reloadButton] = buttons;
-    expect(reloadButton.textContent).toBe("Reload");
+    expect(reloadButton.textContent).toBe("Update");
     expect(reloadButton.type).toBe("button");
 
     const hasDismissButton = buttons.some(
