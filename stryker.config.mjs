@@ -21,6 +21,7 @@ export default {
     "!scripts/**/*.test.ts",
     "!src/styles/tokens.stylex.ts",
     "!src/app/sw-register.tsx",
+    "!src/lib/sw/**",
   ],
   reporters: ["clear-text", "progress", "html"],
   thresholds: {

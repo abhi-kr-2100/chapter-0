@@ -81,8 +81,8 @@ export function UpdateBanner({ onReload, onDismiss }: UpdateBannerProps) {
         </h2>
       </div>
       <p id="update-banner-desc" {...stylex.props(styles.description)}>
-        A new version of Chapter 0 is available. Reloading will update all open
-        instances of Chapter 0.
+        A new version of Chapter 0 is available. All instances will reload.
+        Please save any unsaved work.
       </p>
       <div {...stylex.props(styles.actions)}>
         {onDismiss ? (
@@ -91,7 +91,7 @@ export function UpdateBanner({ onReload, onDismiss }: UpdateBannerProps) {
           </Button>
         ) : null}
         <Button type="button" variant="primary" onClick={onReload}>
-          Reload
+          Update
         </Button>
       </div>
     </aside>
