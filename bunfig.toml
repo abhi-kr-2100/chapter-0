@@ -1,6 +1,10 @@
 [test]
 coverage = true
-coveragePathIgnorePatterns = ["tests/**"]
+coveragePathIgnorePatterns = [
+  "tests/**",
+  "src/lib/sw/**",
+  "src/app/sw-register.tsx",
+]
 coverageSkipTestFiles = true
 coverageThreshold = 1.0
 preload = ["./tests/setup.ts"]
