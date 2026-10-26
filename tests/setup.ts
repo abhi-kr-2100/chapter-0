@@ -1,23 +1,10 @@
 import { afterEach } from "bun:test";
 import * as babel from "@babel/core";
+import { GlobalRegistrator } from "@happy-dom/global-registrator";
 import { plugin } from "bun";
-import { GlobalWindow } from "happy-dom";
 import { getStyleXOptions } from "../stylex-babel.config.js";
 
-const win = new GlobalWindow({ url: "http://localhost" });
-Object.assign(globalThis, {
-  window: win,
-  document: win.document,
-  HTMLElement: win.HTMLElement,
-  HTMLButtonElement: win.HTMLButtonElement,
-  Node: win.Node,
-  Element: win.Element,
-  Event: win.Event,
-  MouseEvent: win.MouseEvent,
-  KeyboardEvent: win.KeyboardEvent,
-  FocusEvent: win.FocusEvent,
-  customElements: win.customElements,
-});
+GlobalRegistrator.register({ url: "http://localhost" });
 
 afterEach(async () => {
   const { cleanup } = await import("./test-utils");
