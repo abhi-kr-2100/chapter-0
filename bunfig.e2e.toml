@@ -1,0 +1,10 @@
+[test]
+coverage = true
+coveragePathIgnorePatterns = [
+  "tests/**",
+  "src/lib/sw/**",
+  "src/app/sw-register.tsx",
+]
+coverageSkipTestFiles = true
+randomize = true
+onlyFailures = true
