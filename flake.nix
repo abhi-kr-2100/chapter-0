@@ -21,12 +21,14 @@
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
             bun
+            chromium
             imagemagick
             typescript-language-server
           ];
-          # TODO: This won't work on non-linux-x64 systems.
           shellHook = ''
+            # TODO: This won't work on non-linux-x64 systems.
             export BIOME_BINARY="@biomejs/cli-linux-x64-musl/biome"
+            export CHROMIUM_PATH="${pkgs.chromium}/bin/chromium"
           '';
         };
       }
