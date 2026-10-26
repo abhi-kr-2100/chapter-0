@@ -26,6 +26,7 @@
     "@babel/preset-react": "^7.26.3",
     "@babel/preset-typescript": "^7.26.0",
     "@biomejs/biome": "^2.5.15",
+    "@happy-dom/global-registrator": "^21.0.4",
     "@stryker-mutator/core": "^10.1.1",
     "@stylexjs/babel-plugin": "^0.19.1",
     "@stylexjs/postcss-plugin": "^0.19.1",
