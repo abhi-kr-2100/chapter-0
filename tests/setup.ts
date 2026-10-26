@@ -1,10 +1,21 @@
-import { afterEach } from "bun:test";
+import { afterEach, mock } from "bun:test";
 import * as babel from "@babel/core";
 import { GlobalRegistrator } from "@happy-dom/global-registrator";
 import { plugin } from "bun";
 import { getStyleXOptions } from "../stylex-babel.config.js";
 
 GlobalRegistrator.register({ url: "http://localhost" });
+
+mock.module("next/font/google", () => ({
+  Cantarell: (options: { variable: string }) => ({
+    className: "font-cantarell",
+    variable: options.variable,
+  }),
+  Petit_Formal_Script: (options: { variable: string }) => ({
+    className: "font-petit",
+    variable: options.variable,
+  }),
+}));
 
 afterEach(async () => {
   const { cleanup } = await import("./test-utils");

@@ -20,7 +20,6 @@ export default {
     "!src/**/*.test.{ts,tsx}",
     "!scripts/**/*.test.ts",
     "!src/styles/tokens.stylex.ts",
-    "!src/app/layout.tsx",
     "!src/app/sw-register.tsx",
   ],
   reporters: ["clear-text", "progress", "html"],

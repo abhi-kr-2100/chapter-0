@@ -6,6 +6,7 @@ import { colors, typography } from "../styles/tokens.stylex";
 import "./globals.css";
 import { ServiceWorkerRegister } from "./sw-register";
 
+// Stryker disable all
 const petitFormalScript = Petit_Formal_Script({
   weight: "400",
   subsets: ["latin"],
@@ -19,10 +20,11 @@ const cantarell = Cantarell({
   variable: "--font-cantarell",
   display: "swap",
 });
+// Stryker restore all
 
 export const metadata: Metadata = {
   title: "Chapter 0",
-  description: "Read books inside your browser",
+  description: "Book reader inside your browser",
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
@@ -46,6 +48,7 @@ export const viewport: Viewport = {
   ],
 };
 
+// Stryker disable all
 const styles = stylex.create({
   html: {
     colorScheme: "light dark",
@@ -61,6 +64,7 @@ const styles = stylex.create({
     MozOsxFontSmoothing: "grayscale",
   },
 });
+// Stryker restore all
 
 export default function RootLayout({
   children,
