@@ -10,3 +10,6 @@ coverage
 .stryker-tmp
 reports
 /public/sw.js
+/next-env.d.ts
+/public/favicon.ico
+/public/icons/*.png
