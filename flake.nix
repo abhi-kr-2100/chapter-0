@@ -22,6 +22,7 @@
           packages = with pkgs; [
             bun
             imagemagick
+            typescript-language-server
           ];
           # TODO: This won't work on non-linux-x64 systems.
           shellHook = ''
